@@ -1,0 +1,7 @@
+Speedometer
+===========
+by: Ian Llewellyn
+
+The Speedometer class can be used to copy one file to another. The module can
+also be run from the command line and passed stdin to stdout as fast as
+possible while measuring the speed of the transfer.
