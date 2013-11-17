@@ -22,6 +22,12 @@ class Speedometer(object):
     The Speedometer class implements a file copier that gives regular updates
     on the number of bytes copied, the time taken and the average speed of the
     transfer.
+
+    Instantiate the class using the following syntax:
+    Speedometer(in_fd, out_fd, info_fd)
+
+    For example:
+    speedo = Speedometer(sys.stdin, file('output.data'), sys.stderr)
     """
 
     def __init__(self, in_fd, out_fd, info_fd):
