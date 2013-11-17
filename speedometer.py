@@ -48,7 +48,7 @@ class Speedometer(object):
                     self.total_bytes = 0
                     self.start_time = datetime.datetime.now()
                     while 1:
-                        data = in_file.read(1024)
+                        data = in_file.read(8192)
                         if len(data) == 0:
                             break
                         out_file.write(data)
