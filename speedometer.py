@@ -54,12 +54,13 @@ class Speedometer(object):
                     self.total_bytes = 0
                     self.start_time = datetime.datetime.now()
                     while 1:
-                        data = in_file.read(8192)
-                        if len(data) == 0:
+                        data = in_file.read(1024*14)
+                        data_len = len(data)
+                        if data_len == 0:
                             break
                         out_file.write(data)
 
-                        self.total_bytes += len(data)
+                        self.total_bytes += data_len
                         self.total_time = (datetime.datetime.now() -
                             self.start_time).total_seconds()
                         self.average_speed = self.total_bytes / self.total_time
